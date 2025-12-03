@@ -1,0 +1,7 @@
+git init 初始化git仓库
+git branch 查看分支
+git branch new_branch(创建新分支
+git add  将文件添加到暂存区
+git commit -m "描述" 将add的文件添加到本地仓库，   -m是使用描述的意思
+git config --global user.name "设置名称"
+git config --global user.emali "设置邮箱"

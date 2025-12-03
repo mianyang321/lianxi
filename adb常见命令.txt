@@ -82,6 +82,8 @@ logcat    记事本再导出一次log
 adb shell dmesg > dmesg.txt
 adb shell logcat > logcat.txt
 
+11
+
 
 
 
