@@ -1,0 +1,92 @@
+查看设备连接情况
+adb devices
+
+安装应用
+adb install -r -d app名称
+-r 用于覆盖安装   可选
+
+抓log
+adb logcat -c    先清掉之前的记录
+
+adb logcat -v time > D:\Logcat\logcat.log
+D:\Logcat\logcat.log是保存在电脑的路径
+
+卸载应用
+adb uninstall -k  包名（需要指导apk的路径和文件名
+-k 保留缓存    可选
+
+屏幕截图
+adb shell screencap /sdcard/screen.png
+
+录制视频
+adb shell screenrecord /sdcard/demo.mp4
+
+将手机的文件拷贝到电脑当中
+使用**adb pull <remote> [local]**命令。其中，local地址为空，则会拷贝到电脑当前目录下
+adb pull /sdcard/crime.apk
+ /sdcard/crime.apk:手机端内文件的位置和名称
+
+将电脑的文件拷贝到手机当中
+adb push <local> <remote>
+adb push crime.apk /sdcard/data/data
+crime.apk:电脑端的路径和文件名
+/sdcard/data/data：手机端需要传输到的位置
+
+返回命令
+adb shell input keyevent 4
+
+查看前台app应用位置
+adb shell dumpsys activity activities | findstr mResumedActivity
+
+清除app数据
+adb shell pm clear com.example.packagename
+com.example.packagename：app的位置
+
+查看所有App的名称
+adb shell pm list packages  -f
+-f: 显示app的路径    可选
+
+让手机重启
+adb shell am broadcast -a android.intent.action.BOOT_COMPILETED
+
+显示日志信息
+adb logcat          ctrl+c 停止日志输出
+
+查看进程信息
+adb shell ps +包名
+
+跳转到系统设置界面
+adb shell am start -n com.android.settings/.Settings
+
+
+先输入这个删除普通应用
+adb uninstall com.waophoto.smartframe
+获取移动端权限
+adb root
+将分区置为可读写状态
+adb remount
+进入设备储存内部
+cd system/priv-app
+查看全部应用
+ls -l
+删除对应应用
+rm -rf apk名称
+例子：rm -rf CloudPhotoFrame.apk
+
+蓝牙模块抓log
+adb shell
+dmesg   然后记事本右键导出log
+logcat    记事本再导出一次log
+
+将抓log并导出到电脑，要先使用adb root
+adb shell dmesg > dmesg.txt
+adb shell logcat > logcat.txt
+
+
+
+
+
+
+
+
+
