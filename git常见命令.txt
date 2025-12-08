@@ -12,3 +12,4 @@ git status 查看状态
 git status -s：以简洁的格式显示文件状态，只显示文件的状态标识和文件名
 git config --global user.name "设置名称"
 git config --global user.emali "设置邮箱"
+git rm --cached "文件名"   取消追踪
