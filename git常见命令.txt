@@ -14,3 +14,8 @@ git config --global user.name "设置名称"
 git config --global user.emali "设置邮箱"
 git rm --cached "文件名"   取消追踪、
 git reset  “文件名”  从暂存区移除文件
+git reset "代码提交的哈希值"  前七位，回退版本
+git log 查看提交记录
+git log --since="2025-12-08" --until="2025-12-08"  按时间筛选
+git log --author="your  name "按名称筛选
+git checkout "不同分支" 切换分支
