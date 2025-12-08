@@ -19,3 +19,7 @@ git log 查看提交记录
 git log --since="2025-12-08" --until="2025-12-08"  按时间筛选
 git log --author="your  name "按名称筛选
 git checkout "不同分支" 切换分支
+git checkout -b "分支名"   创建并切换
+git remote  add "仓库名"  "仓库地址"   连接远程仓库
+git clone   "仓库地址"    拉取仓库到本地
+git remote -v 显示所有已添加的远程仓库的别名和地址
