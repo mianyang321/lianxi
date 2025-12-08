@@ -23,3 +23,4 @@ git checkout -b "分支名"   创建并切换
 git remote  add "仓库名"  "仓库地址"   连接远程仓库
 git clone   "仓库地址"    拉取仓库到本地
 git remote -v 显示所有已添加的远程仓库的别名和地址
+git push "仓库名称" "仓库地址"(已连接可以不用写）  推送内容至仓库
