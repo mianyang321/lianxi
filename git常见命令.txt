@@ -30,3 +30,6 @@ git push origin --delete  "分支名"   删除远程仓库的分支
 git pull origin master   拉取远程仓库的更新
 git merge  合并分支
 git remote prune origin   删除本地仓库中对应已删除的远程分支的引用
+git tag v1.0 为分支添加标签
+git tag 查看全部标签
+git show v1.0 查看标签的分支修改
